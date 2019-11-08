@@ -9,6 +9,8 @@ import Navigations from "./componentes/Navigations";
 import CreateMesas from "./componentes/CreateMesas";
 import CreateUser from "./componentes/CreateUser";
 import MesasList from "./componentes/MesasList";
+import RegistrarUsuario from './componentes/RegistrarUsuario';
+
 
 class App extends Component {
 
@@ -34,6 +36,7 @@ class App extends Component {
           <Route path="/create" component={CreateMesas} />
           <Route path="/user" component={CreateUser} />
           <Route path="/login" component={CreateUser} />
+          <Route path="/registrar" component={RegistrarUsuario} />
       
         </div>
       </BrowserRouter>

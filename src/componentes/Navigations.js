@@ -6,7 +6,7 @@ export default class Navigations extends Component {
   logoutUser = () =>{
 
     
-    this.setState({ token: "", user: null, _id: "" });
+     
     localStorage.removeItem('token');
     localStorage.removeItem('usuario');
     localStorage.removeItem('idUser');
@@ -91,6 +91,12 @@ export default class Navigations extends Component {
               <li className="nav-item">
                 <Link className="nav-link" to="/login">
                   Login
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link className="nav-link" to="/registrar">
+                  Registrar
                 </Link>
               </li>
             

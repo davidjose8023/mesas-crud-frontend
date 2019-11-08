@@ -25,6 +25,7 @@ export default class CreateUser extends Component {
     e.preventDefault();
     let url = `${CONSTANTES.URL_SERVICIOS}/api/login`;
     //url += '?token='+ this.token;
+    console.log(this.state);
 
     const resp = await axios.post(url,{
       email: this.state.email,
@@ -179,7 +180,7 @@ export default class CreateUser extends Component {
                 </div>
 
                 <button type="submit" className="btn btn-primary">
-                  Save
+                  Ingresar
                 </button>
               </form>
             </div>

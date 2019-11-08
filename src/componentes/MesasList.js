@@ -25,7 +25,8 @@ export default class MesasList extends Component {
   };
 
   deleteMesa = async mesaId => {
-    const url = `${CONSTANTES.URL_SERVICIOS}/api/delete-mesa/${mesaId}`;
+    let url = `${CONSTANTES.URL_SERVICIOS}/api/delete-mesa/${mesaId}`;
+    url += '?token='+ localStorage.getItem('token');
     await axios.delete(url);
     this.getMesas();
   };
