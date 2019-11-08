@@ -34,7 +34,7 @@ class App extends Component {
           <Route path="/create" component={CreateMesas} />
           <Route path="/user" component={CreateUser} />
           <Route path="/login" component={CreateUser} />
-          <Route path="/logout" component={CreateUser} />
+      
         </div>
       </BrowserRouter>
     );

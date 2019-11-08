@@ -85,6 +85,7 @@ export default class CreateUser extends Component {
 
   deleteUser = async userId => {
     let url = `${CONSTANTES.URL_SERVICIOS}/api/delete-user/${userId}`;
+    url += '?token='+ localStorage.getItem('token');
     const response = window.confirm("ESta seguro de borrar el usuario?");
     if (response) {
       await axios.delete(url);

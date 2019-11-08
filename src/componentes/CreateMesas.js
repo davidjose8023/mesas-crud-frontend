@@ -43,6 +43,7 @@ export default class CreateMesas extends Component {
   onSubmit = async e => {
     e.preventDefault();
     const url_1 = `${CONSTANTES.URL_SERVICIOS}/api/update-mesas/${this.state._id}`;
+    
     const url_2 = `${CONSTANTES.URL_SERVICIOS}/api/crear`;
 
     const mesa = {
@@ -53,7 +54,8 @@ export default class CreateMesas extends Component {
       date: this.state.date,
       usuario: this.state._id
     };
-    const url = this.state.editing ? url_1 : url_2;
+    let url = this.state.editing ? url_1 : url_2;
+    url += '?token='+ localStorage.getItem('token');
     if (this.state.editing) {
       await axios.put(url, mesa);
     } else {
